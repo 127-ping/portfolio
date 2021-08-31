@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --background-color: #333647;
+    --secondary-color: #bbbbbb;
+    --skyblue: #87CEEB;
+    --bg-color-of-skill-section: #52565C;
+    --bg-color-form-input: #ffffff24;
+    --border-color-from-input: #c4c4c44a;
+}
+* {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: var(--background-color) !important;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, li, td, a {
+    cursor: pointer;
+}
+
+.particles-js-canvas-el {
+    position: absolute;
+    height: 100% !important;
+    width: 100%;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    z-index: -1000;
+    margin: 0px;
+}
+
+/* Navbar Style */
+.nav_section .navbar-brand {
+    font-size: 25px;
+}
+.nav_section .navbar-nav li {
+    margin: 0px 8px;
+}
+.nav_section .navbar-nav li a {
+    color: white !important;
+    font-size: 15px !important;
+}
+.nav_section .navbar-nav .nav-link::before {
+    content: '';
+    width: 0px;
+    height: 0px;
+    background-color: white;
+    position: absolute;
+    bottom: 7px;
+    transition: 0.5s;
+}
+.nav_section .navbar-nav .nav-link:hover::before {
+    content: '';
+    width: 18px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    bottom: 7px;
+    transition: 0.5;
+}
+
+/* Hero Section */
+
+.hero-section .row {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+.hero-section .row h1,h2,h3,p {
+    color: white !important;
+}
+.hero-section .row h3 {
+    font-size: 19px;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+.hero-section .row h3::after {
+    content: '';
+    position: absolute;
+    text-align: center;
+    top: 10px;
+    left: 70px;
+    width: 90px;
+    height: 2px;
+    background-color: white;
+}
+.hero-section .row h1 {
+    font-size: 65px;
+    font-weight: 800;
+}
+.hero-section .row h2 {
+    font-size: 20px;
+    font-weight: 100;
+    margin: 8px 0px;
+}
+.hero-section .row p {
+    font-size: 13px;
+    margin-top: 13px;
+    line-height: 21px;
+    color: var(--secondary-color);
+}
+.hero-section .row button {
+    border-radius: 5px;
+    font-size: 19px;
+    color: white;
+    background-color: skyblue;
+    border: 3px solid skyblue;
+    width: 110px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 10px;
+}
+.hero-section .row button:hover {
+    animation: swing;
+    animation-duration: 0.7s;
+    background-color: var(--secondary-color);
+    color: rgb(41, 41, 41);
+    border-color: var(--secondary-color);
+
+}
+.hero-section .row img {
+    width: 80%;
+}
+
+@media (max-width: 1200px) and (min-width: 993px) {
+    .hero-section .row h1 {
+        font-size: 58px;
+    }
+}
+
+@media (max-width: 993px) and (min-width: 763px) {
+    .hero-section .row h1 {
+        font-size: 42px;
+    }
+    .hero-section .row h2 {
+        font-size: 15px;
+    }
+    .hero-section .row p {
+        font-size: 11px;
+    }
+    .hero-section .row h3 {
+        font-size: 15px;
+    }
+    .hero-section .row button {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 763px) and (min-width: 500px) {
+    .hero-section {
+        margin: 55px, 0px;
+    }
+    .hero-section .row h1 {
+        font-size: 42px;
+        text-align: center;
+    }
+    .hero-section .row h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+    .hero-section .row p {
+        font-size: 11px;
+        text-align: center;
+    }
+    .hero-section .btn-container {
+        justify-content: center;
+        text-align: center;
+    }
+    .hero-section .row h3 {
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+    .hero-section .row h3::after {
+        width: 0px;
+    }
+    .hero-section .btn-container button {
+        width: 100px;
+        height: 43px;
+        font-size: 15px;
+        text-align: center;
+    }
+    .hero-section img {
+        width: 60%;
+        margin-top: 20px;
+    }
+}
+
+/* About Us Section */
+
+.about-section {
+    background-color: #282A39;
+    padding: 180px;
+}
+.about-section #heading {
+    font-weight: 600;
+    font-size: 40px;
+    letter-spacing: 0.5px;
+    line-height: 57px;
+}
+.about-section .lets-talk {
+    color: white;
+    font-weight: 400;
+    margin-top: 40px;
+}
+.about-section #info-gmail {
+    font-weight: 600;
+    font-size: 15px;
+    color: #87CEEB;
+    margin-top: 35px;
+    word-spacing: 6px;
+}
+.about-section .contact-info {
+    margin-top: 15px;
+}
+.about-section .contact-info h5 {
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+    word-spacing: 6px;
+}
+.about-section .about-me-right-section #txt{
+    font-size: 15px;
+    margin-top: 13px;
+    line-height: 25px;
+    color: var(--secondary-color);
+}
+.about-section .about-me-right-section hr {
+    margin: 0px;
+    width: 7rem;
+    border: 2.5px solid #87CEEB;
+}
+.about-section .about-me-right-section table td {
+    border: none;
+    color: white;
+    font-size: 13px;
+}
+.about-section .about-me-right-section button {
+    border-radius: 7px;
+    font-size: 15px;
+    color: white;
+    background-color: #87CEEB;
+    border: 3px solid #87CEEB;
+    font-family: 'Poppins' sans-serif;
+    margin-top: 10px;
+}
+.about-section .about-me-right-section button:hover {
+    animation: swing;
+    animation-duration: 0.7s; 
+}
+
+@media (max-width: 993px) and (min-with: 768px) {
+    .about-section .about-me-right-section #txt {
+        font-size: 12px;
+    }
+    .about-section #heading {
+        font-size: 28px !important;
+    }
+}
+@media (max-width: 993px) and (min-width: 500px) {
+    .about-section {
+        padding: 180px 0px;
+    }
+}
+
+/* Skills Section */
+.skills-section {
+    padding: 150px 0px;
+}
+.skills-left-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.skills-section #heading {
+    font-size: 50px;
+    font-weight: 600;
+    color: white;
+}
+.skills-section hr {
+    border: 0.5px solid var(--skyblue);
+    width: 6rem;
+    margin: 12px 0px;
+}
+.skills-section p {
+    color: var(--secondary-color);
+    font-size: 13px;
+}
+.skills-section .social-media-icon .list-group-item {
+    border: none;
+    color: white;
+    border-left: 2px solid var(--skyblue);
+    border-radius: 0px !important;
+    margin: 5px 8px;
+    width: 200px;
+    background-color: var(--bg-color-of-skill-section);
+    font-size: 14px;
+}
+.skills-section .social-media-icon .list-group-item a{
+    transition: 0.9s;
+}
+.skills-section .social-media-icon .list-group-item:hover a {
+    margin-left: 100px;
+}
+.skills-right-section .each-skill {
+    margin: 25px 0px;
+} 
+.skills-right-section .each-skill span {
+    font-size: 14px;
+    color: white;
+}
+.skills-right-section .each-skill .progress {
+    background-color: var(--secondary-color);
+    border-radius: 100px;
+    margin-top: 3px;
+    height: 15px;
+}
+
+/* Portfolio Section */
+
+.portfolio-section {
+    background-color: #282A39;
+    padding: 170px 0px;
+}
+.portfolio-section .nav-tabs {
+    border: none;
+    width: 50%;
+    text-align: center;
+}
+.portfolio-section .nav-tabs .nav-link.active {
+    border: none;
+    color: white;
+    border-bottom: 2px solid var(--skyblue) !important;
+    background-color: transparent;
+}
+.portfolio-section .nav-tabs .nav-link.active:hover {
+    border-bottom: 2px solid var(--skyblue) !important;
+}
+.portfolio-section .nav-tabs .nav-item.show .nav-link {
+    font-weight: 400;
+    font-size: 14px;
+    background-color: transparent !important;
+}
+.portfolio-section .tab-content .card img {
+    border: 2px solid white;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 170px 0px;
+}
+.contact-section #heading {
+    font-weight: 600;
+    font-size: 50px;
+}
+.contact-section hr {
+    border: 0.5px solid var(--skyblue);
+    width: 6rem;
+    margin: 12px 0px;
+}
+.contact-section #text {
+    color: var(--secondary-color);
+    font-size: 13px;
+}
+.contact-section form .form-control {
+    background-color: var(--bg-color-form-input);
+    border: 2px solid var(--border-color-from-input);
+    border-radius: 0px;
+    color: white;
+}
+.contact-section form button {
+    background-color: var(--skyblue);
+    border: 2px solid white;
+    width: 100px;
+    font-size: 15px;
+}
+.contact-section form button:hover {
+    animation: swing;
+    animation-duration: 0.7s;
+}
+.contact-section ul li {
+    color: white;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.mapouter {
+    position: relative;
+    text-align: right;
+    height: 327px;
+    width: 525px;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 327px;
+    width: 525px;
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+    .contact-section #heading {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 640px) and (min-width: 360px) {
+    .gmap_canvas {
+        height: 200px;
+        width: 300px;
+    }
+}
+
+/* Footer Section */
+
+.footer-section {
+    background-color: #282A39;
+    border-top: 2px solid var(--border-color-from-input);
+    padding: 20px 0px;
+}
+.footer-section .navbar-brand {
+    font-size: 23px;
+}
+.footer-section p {
+    margin-top: 13px;
+    color: var(--secondary-color);
+    font-size: 12px;
+}
+.footer-section .logo-area svg {
+    color: var(--skyblue);
+    width: 25px;
+    height: 25px;
+    margin: 2px;
+    display: inline-block;
+    text-align: center;
+    justify-content: center;
+    border: 1.5px solid var(--skyblue);
+    border-radius: 100%;
+    margin-right: 5px;
+}
+.footer-section .logo-area svg:hover {
+    animation: swing;
+    animation-duration: 0.7s;
+    color: var(--secondary-color);
+    border: 1.5px soid var(--secondary-color);
+}
+.footer-section .row .column .heading {
+    font-weight: 400 !important;
+    font-size: 21px !important;
+    color: white;
+}
+.footer-section .list-group .list-group-item {
+    margin: -3px 0px;
+    color: #fff;
+    transition: 0.7s !important;
+}
+.footer-section .list-group .list-group-item:hover svg {
+    margin-right: 10px;
+}
+.footer-section .list-group .list-group-item svg {
+    color: var(--skyblue);
+}
+
+@media (max-width: 763px) and (min-width: 500px) {
+    .footer-section .links {
+        margin-bottom: 30px;
+    }
+    .footer-section .row .column .heading {
+        font-size: 17px !important;
+    }
+    .portfolio-section .list-group {
+        margin-bottom: 30px;
+    }
+    .portfolio-section .list-group .list-group-item {
+        font-size: 13px;
+    }
+}
